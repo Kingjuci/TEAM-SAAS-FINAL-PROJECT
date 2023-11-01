@@ -162,6 +162,30 @@ body {
     color: #DB353A;
     transition: 0.5s ease-in-out;
 }
+/*
+.nav_link {
+    position: fixed;
+    width: 94%;
+    top: 5rem;
+    left: 18px;
+    background-color: teal;
+
+}
+
+.nav_link a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav_link a:hover {
+    background-color: lightcoral;
+}
+
+.hide {
+    display: none;
+}*/
 
 .slide{
     width: 100%;
@@ -547,6 +571,12 @@ h1 {
 
 }
 
+.btn:hover {
+    color: #f63e4e;
+    border: 2px solid grey;
+    background-color:green;
+}
+
 .products{
    
     display: grid;
@@ -628,7 +658,7 @@ h1 {
     padding: 20px;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #ddd;
+    border: 5px solid #ddd;
     margin-bottom: 100px;
 }
 
@@ -657,6 +687,8 @@ a:hover{
     cursor: pointer;
     float: right;
     margin-right: 25px;
+    display: none;
+    
 
 }
 
@@ -668,40 +700,186 @@ a:hover{
     background-color: white;
 }
 
-/*media screens */
-@media only screen and (max-width: 768px) {
 
-    /* This will djust styles for smaller screens here */
-    .faqs-container {
-        padding: 10px;
-        /* Reduce padding for smaller screens */
+/*media screens 
+@media screen and (max-width: 2150px) {
+    .hamburger {
+        display: none;
     }
+}*/
 
-    .question {
-        font-size: medium;
-        /* Reduce font size for smaller screens */
-    }
-
-    .heads {
-        width: 97vw;
-    }
-
+@media screen and (max-width: 1024px) {
     
+    body {
+        width: 100%;
+    }
+
+    .heads, .heads2 {
+        width: 100%;
+    }
+    .heads-container {
+        width: 100%;
+    }
+    
+    .slide {
+        width: 100%;
+    }
+    .container {
+        justify-content: center;
+        width: auto
+    }
+    .overlay {
+        width: 100%;
+    }
+    .nav {
+        float: right;
+        margin-right: 50px;
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    .logo1 {
+        width: 100%;
+    }
+
+    .foots {
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .cart-container{
+        margin-left: 120px;
+        width: 100%;
+    }
+
+    .content-body {
+        width: 90%;
+        justify-content: center;
+        padding-left: 50px;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .push-right {
+        margin-right: 50px;
+    }
+    .logo1 .p-10 {
+        width: auto;
+    }
+
+    .container {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px ) {
+    
+    .hamburger {
+        display: none;
+    }
+
+    .total-section {
+        margin-bottom: 400px;
+        float: none;
+        width: 400px;
+    }
+
+    .total-table {
+        float: none;
+    }
+
+    .cart-container {
+        display: block;
+        margin-left: 120px;
+        width: 100%;
+    }
+
+    .cart-table {
+        width: 100px;
+    }
+
+    .cart-table-wrap {
+        width: 100px;
+    }
+
+    .col-8 .col-card {
+        width: 200px;
+    }
+
+    .table-head-row {
+        width: 200px;
+    }
+    .total-table td, tr, th {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 414px ) {
+    .cart-container {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .total-section {
+        width: 300px;
+    }
+
+    .total-table td, tr, th {
+        width: 100px;
+    }
+
+    .cart-table {
+        width: 80px;
+    }
+
+    .cart-table-wrap {
+        width: 80px;
+    }
+
+    .col-8 .col-card {
+        width: 80px;
+    }
+
+    .table-head-row {
+        width: 100px;
+    }
+
+    .products {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+}
+/*
+    .heads {
+        width: 73%;
+    }
+
     .heads-container {
         width: 100%;
     }
 
-    
     .slide {
         background-position-x: center;
+        width: 110%;
     }
     
     .slide-text {
         padding: 50px;
         text-align: center;
+        
     }
 
-    
     .slide-text h2, p, .intro{
         text-align: center;
     }
@@ -722,7 +900,7 @@ a:hover{
     .content-body {
         display:flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
     }
     
     .cat-btn {
@@ -734,153 +912,78 @@ a:hover{
     .hero-btn {
         margin-left: 75px;
     }
-
-}
-
-
-
-@media only screen and (max-width: 414px) {
-    /* For mobile phones: */
-   body {
-     width: 100%;
-     min-height: 50px;
-   }
-
-   .heads {
-    width: 97vw;
-}
-
-.heads2 {
-    width: 97vw; 
-}
-
-
-.heads-container {
-    width: 100%;
-}
-
-
-.nav ul {
-    display:block;
-}
-
-
-.nav {
-   float: right;
-}
-
-
-.nav_link {
-    display: none;
- }
-
-.slide {
-    background-position-x: center;
-}
-
-.slide-text {
-    padding: 50px;
-    text-align: center;
-}
-
-
-.slide-text h2, p, .intro {
-    text-align: center;
-}
-
-p.intro{
-    text-align: center;
-}
-
-
-.container {
-    width: 100%;
-}
-
-
-.container h1{
-   font-size: 24pt;
-}
-
-.col-25 {
-    width: 98%;
-    flex: 0 0 auto;
-}
-
-.content-body {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 15px;
-}
-
-
-.cat-btn {
-    padding: 0 30px;
-}
-
-
-.hamburger {
-    display: block;
-}
-
-.hero-btn {
-    margin-left: 50px;
-}
-.faqs-container{
-    width: 100%;
-}
-}
-
-  
-/* Media Querries */
-@media screen and (max-width: 600px) {
     
-     .heads {
-        width: 97vw; 
+}   /*
+    .overlay {
+        width: 110%
+    }
+    .logo1 .p-10 {
+        width: 110%
+    }
+    
+}
+
+@media screen and (min-width: 600px) {
+    
+    .nav__link {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+
+    }
+   
+    .nav__link a {
+        display: inline-block;
+        padding: 15px 20px;
     }
 
-    .heads2 {
-        width: 97vw;
+    .hamburger {
+        display: none;
+    }
+}
+
+.container {
+    padding: 15px;
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+
+@media screen and (min-width: 768px ) {
+    
+    .hamburger {
+        display: none;
+    }
+}
+/*
+    .heads {
+        width: 73%;
     }
 
     .heads-container {
         width: 100%;
-        flex-wrap: wrap;
-       
     }
 
-    .nav ul {
-        display:flex;
-    }
-
-    
     .slide {
         background-position-x: center;
+        width: 110%;
     }
-
     
     .slide-text {
         padding: 50px;
         text-align: center;
+        
     }
 
-    .slide-text {
-        padding: 50px;
-        text-align: center;
-    }
-
-    
-    .slide-text h2, p, .intro {
+    .slide-text h2, p, .intro{
         text-align: center;
     }
 
     p.intro{
-        text-align: center;
+        margin-left: 100px;
     }
 
-    
     .container {
         width: 100%;
     }
@@ -893,41 +996,97 @@ p.intro{
     .content-body {
         display:flex;
         flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hamburger {
-        display: none;
+        justify-content: space-between;
     }
     
     .cat-btn {
         padding: 0 30px;
     }
-
-    .nav {
-       float:right;
+    .hamburger {
+        display: none;
+    }
+    .hero-btn {
+        margin-left: 75px;
+    }
+    
+}   /*
+    .overlay {
+        width: 110%
+    }
+    .logo1 .p-10 {
+        width: 110%
+    }
+    .cat-container{
+        width: 110%;
+    }
+}*/
+@media screen and (max-width: 414px) {
+    .hero-btn {
+       margin-left: auto; 
     }
 
-    .nav ul li a {
-        font-size: 8pt;
+    .overlay {
+        width: 100%;
     }
 
-    .nav ul .dropdown {
-        font-size: 8pt;
-        padding-top: 10px;
+    .heads, .heads2 {
+        max-width: 414px;
     }
 
+    .hamburger {
+        display: block;
     }
 
-    @media screen and (min-width: 1024px) {
-        .hamburger {
-            display: none;
-        }
+    .nav_link {
+        display: none;
     }
 
-    /*@media screen and (min-width: 414px){
-        .hamburger {
-            display: block;
-        }
+    .slide{
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .slide-text {
+        padding-left: 40px;
+    }
+
+    .hero-btn {
+        margin-left: 70px;
+    }
+
+    .container {
+        width: 100%;
+    }
+    
+    .container h1{
+       font-size: 24pt;
+    }
+    
+    .col-25 {
+        width: 98%;
+        flex: 0 0 auto;
+    }
+    
+    .content-body {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+    
+    .cat-btn {
+        padding: 0 30px;
+    }
+    
+    .hero-btn {
+        margin-left: 50px;
+    }
+
+    p.intro {
+        padding-right: 40px;
+    }
+    
 }
-
